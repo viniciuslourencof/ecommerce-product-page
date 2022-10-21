@@ -1,0 +1,11 @@
+.conteudo {
+    display: flex;
+}
+
+.conteudo__fotos {
+    width: 50%;
+}
+
+.conteudo__fotos_principal {
+    width: 80%;
+}

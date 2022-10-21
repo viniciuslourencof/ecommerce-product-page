@@ -1,5 +1,8 @@
 .cabecalho {
+    align-items: center;
     border-bottom: 2px solid hsl(223, 64%, 98%);
-    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 2rem;
+    padding: 1.5rem 0;
 }

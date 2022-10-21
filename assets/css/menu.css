@@ -13,3 +13,10 @@
 .menu__lista_logo {
     margin-right: 4rem;
 }
+
+.menu__usuario_avatar {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 3rem;
+    margin-right: 1rem;
+}
