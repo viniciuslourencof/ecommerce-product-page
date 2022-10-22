@@ -1,11 +1,48 @@
 .conteudo {
     display: flex;
+    padding: 2rem;    
+    justify-content: space-between;
 }
 
 .conteudo__fotos {
-    width: 50%;
+    width: 45%;        
 }
 
 .conteudo__fotos_principal {
-    width: 80%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.conteudo__fotos_secundarias {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo__fotos_secundaria {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10px;       
+}
+
+.conteudo__info {
+    width: 45%;
+}
+
+.conteudo__info_loja {
+    text-transform: uppercase;
+    color: hsl(26, 100%, 55%);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+.conteudo__info_titulo {
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.conteudo__info_descricao {
+    font-size: 0.75rem;
+    color: hsl(219, 9%, 45%)
 }
