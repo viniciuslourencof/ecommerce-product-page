@@ -19,7 +19,6 @@ function trocaImagemPrincipal (id) {
     fotoPrincipal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
 }
 
-
 for (let index = 0; index < listaFotos.length; index++) {
 
     const foto = listaFotos[index];    
@@ -30,6 +29,13 @@ for (let index = 0; index < listaFotos.length; index++) {
 
 }
 
+function expandeFoto () {
+    document.querySelector(".modal").classList.toggle("show-modal");        
+}
+
+fotoPrincipal.onclick = function () {
+    expandeFoto();
+}
 
 
 
