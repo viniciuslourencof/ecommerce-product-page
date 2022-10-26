@@ -1,6 +1,7 @@
+const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
+const fotoPrincipal = document.querySelector('.conteudo__fotos_principal');
 
-function trocaImagemPrincipal (id) {
-    const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
+function trocaImagemPrincipal (id) {    
 
     for (let index = 0; index < listaFotos.length; index++) {
 
@@ -8,28 +9,27 @@ function trocaImagemPrincipal (id) {
 
         if (foto.classList.contains('ativo')) {
             foto.classList.remove('ativo');    
-        }        
+        }      
 
         if (index == id) {            
             foto.classList.add('ativo');
-        }             
-        
+        }                     
     }
+
+    fotoPrincipal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
 }
 
-function adicionaFuncoes () {
-    const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');    
 
-     for (let index = 0; index < listaFotos.length; index++) {
+for (let index = 0; index < listaFotos.length; index++) {
 
-        const foto = listaFotos[index];    
+    const foto = listaFotos[index];    
 
-        foto.onclick = function () {
-           trocaImagemPrincipal(foto.id); 
-        }
-        
+    foto.onclick = function () {
+        trocaImagemPrincipal(foto.id); 
     }
+
 }
+
 
 
 

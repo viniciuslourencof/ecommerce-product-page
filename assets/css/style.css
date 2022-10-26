@@ -16,6 +16,7 @@
     border-radius: 10px;
 }
 
-.ativo__opacidade {
-    opacity: 0.50;    
+.ativo img {
+    opacity: 0.50;        
 }
+
