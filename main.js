@@ -1,3 +1,4 @@
+
 const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
 const fotoPrincipal = document.querySelector('.conteudo__fotos_principal');
 
@@ -30,13 +31,15 @@ for (let index = 0; index < listaFotos.length; index++) {
 }
 
 function expandeFoto () {
-    document.querySelector(".modal").classList.toggle("show-modal");        
+    document.querySelector(".modal").classList.toggle("show-modal");    
 }
 
 fotoPrincipal.onclick = function () {
     expandeFoto();
 }
 
-
-
-
+function windowOnClick(event) {
+    if (event.target === document.querySelector(".modal")) {
+        expandeFoto();
+    }
+}
