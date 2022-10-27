@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/menu.css">
   <link rel="stylesheet" href="./assets/css/conteudo.css">
+  <link rel="stylesheet" href="./assets/css/cart.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -41,6 +42,18 @@
   </header>
   
   <main class="conteudo">
+
+    <div class="cart invisivel">
+      <h3>Cart</h3>
+      <div class="cart__produto">
+        <img class="cart__produto_foto" src="" alt="">
+  
+        <div class="cart__produto_info">
+          <p class="cart__produto_info_descricao"></p>
+          <p class="cart__produto_info_valor"></p>
+        </div>
+      </div>    
+    </div>    
 
     <div class="conteudo__fotos">
       <img class="conteudo__fotos_principal" src="images/image-product-1.jpg" alt="">
@@ -71,8 +84,7 @@
       <p class="conteudo__info_descricao">
         These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they'll withstand everything the weather can offer.
-      </p>
-      
+      </p>      
 
       <div class="conteudo__info_preco">
         <span class="conteudo__info_preco_atual">$125.00</span>
@@ -85,16 +97,15 @@
       
       <div class="conteudo__info_botoes">        
         <div class="conteudo__info_botoes_qtd">
-          <img src="images/icon-plus.svg" alt="">
-          <span>0</span>
-          <img src="images/icon-minus.svg" alt="">
+          <img class="conteudo__info_botao_qtd_aumenta" src="images/icon-plus.svg" alt="">
+          <span class="conteudo__info_botao_qtd">0</span>
+          <img  class="conteudo__info_botao_qtd_diminui" src="images/icon-minus.svg" alt="">
         </div>
         <button class="conteudo__info_botoes_add">
           <img src="images/icon-cart.svg" class="brightness" alt="">Add to cart
         </button>         
       </div>      
     </section>
-
 
     <div class="modal">
       <div class="modal-content">
@@ -116,9 +127,10 @@
             </div>                 
           </div>           
       </div>  
-    </div>    
+    </div>      
 
   </main>
+
 
   <script src="main.js"></script>
   

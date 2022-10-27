@@ -1,3 +1,4 @@
+"use strict"
 
 const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
 const fotoPrincipal = document.querySelector('.conteudo__fotos_principal');
@@ -42,4 +43,27 @@ function windowOnClick(event) {
     if (event.target === document.querySelector(".modal")) {
         expandeFoto();
     }
+}
+
+function alteraQuantidade(tipo) {
+
+    const botaoQtd = document.querySelector('.conteudo__info_botao_qtd')        
+    const qtd = botaoQtd.innerHTML;
+
+    if (tipo == 'diminui') {        
+      if ((parseInt(qtd) - 1) >= 0)
+        botaoQtd.innerHTML = parseInt(qtd) - 1;  
+    } else {
+      botaoQtd.innerHTML = parseInt(qtd) + 1;
+    }
+}
+
+const botaoDiminuirQtd = document.querySelector('.conteudo__info_botao_qtd_diminui')
+botaoDiminuirQtd.onclick = function () {
+    alteraQuantidade('diminui')
+}
+
+const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aumenta')
+botaoAumentaQtd.onclick = function () {
+    alteraQuantidade('aumenta')
 }
