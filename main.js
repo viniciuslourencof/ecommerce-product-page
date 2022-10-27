@@ -67,3 +67,12 @@ const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aument
 botaoAumentaQtd.onclick = function () {
     alteraQuantidade('aumenta')
 }
+
+function mostraCart () {
+    document.querySelector(".cart").classList.toggle("invisivel");  
+}
+
+const botaoUsuarioCart = document.querySelector('.menu__usuario_cart')
+botaoUsuarioCart.onclick = function () {
+    mostraCart();
+} 

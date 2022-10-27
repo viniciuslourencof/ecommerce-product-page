@@ -1,13 +1,3 @@
-:root {
-    --laranja: hsl(26, 100%, 55%);       
-    --cinza-escuro: hsl(219, 9%, 45%);
-    --cinza-medio: hsl(220, 14%, 75%);
-    --cinza-claro: hsl(26, 100%, 95%);       
-}
-body {
-    clear: right;    
-}
-
 .cabecalho {
     align-items: center;
     border-bottom: 2px solid hsl(223, 64%, 98%);
