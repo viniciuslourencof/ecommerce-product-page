@@ -5,10 +5,16 @@
     width: 15rem;
     position: absolute;  
     left: 85%;
-    top: 90px;    
+    top: 90px;        
 }
 
 .cart h3 {   
     border-bottom: 2px solid hsl(223, 64%, 98%);
     padding: 1rem;
+}
+
+.cart__produto_foto {
+    border-radius: 5px;
+    height: 3rem;
+    width: 3rem;
 }
