@@ -41,7 +41,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;    
-    width: 30%;    
+    width: 40%;    
 
 }
 
@@ -54,4 +54,12 @@
 
 .invisivel {
     display: none;
+}
+
+.botao {
+    background-color: hsl(26, 100%, 55%);    
+    border: none;    
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;   
 }

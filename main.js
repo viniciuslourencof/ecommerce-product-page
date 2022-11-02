@@ -39,12 +39,6 @@ fotoPrincipal.onclick = function () {
     expandeFoto();
 }
 
-function windowOnClick(event) {
-    if (event.target === document.querySelector(".modal")) {
-        expandeFoto();
-    }
-}
-
 function alteraQuantidade(tipo) {
 
     const botaoQtd = document.querySelector('.conteudo__info_botao_qtd')        
@@ -76,3 +70,9 @@ const botaoUsuarioCart = document.querySelector('.menu__usuario_cart')
 botaoUsuarioCart.onclick = function () {
     mostraCart();
 } 
+
+function windowOnClick(event) {
+    if (event.target === document.querySelector(".modal")) {        
+        expandeFoto();
+    }
+}

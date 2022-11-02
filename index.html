@@ -35,7 +35,10 @@
       </nav>      
 
       <div class="menu__usuario">
-        <img class="menu__usuario_cart" src="images/icon-cart.svg" alt="">
+        <div>
+          <div class="menu__usuario_cart_notificacao">3</div>
+          <img class="menu__usuario_cart" src="images/icon-cart.svg" alt="">
+        </div>
         <img class="menu__usuario_avatar" src="images/image-avatar.png" alt="">
       </div>
 
@@ -45,14 +48,23 @@
 
     <div class="cart invisivel">
       <h3>Cart</h3>
-      <div class="cart__produto">
-        <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
-        <div class="cart__produto_info">
-          <p class="cart__produto_info_descricao">Fall Limited Edition Sneakers</p>
-          <p class="cart__produto_info_valor">$125.00 x 
-          <p class="cart__produto_info_qtd">3</p>
-          <p class="cart__produto_info_valortotal">$375.00</p>
-        </div>
+      <div class="cart__produto">        
+          
+          <div class="card__produto_top">
+            <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
+            <div class="cart__produto_info">
+              <p class="cart__produto_info_descricao">Fall Limited Edition Sneakers</p>
+              <div class="cart__produto_info_valores">
+                <span class="cart__produto_info_valor">$125.00</span> 
+                <span>x</span>
+                <span class="cart__produto_info_qtd">3</span>
+                <span class="cart__produto_info_valortotal">$375.00</span>
+              </div>              
+            </div>
+            <img class="card__produto_delete" src="images/icon-delete.svg" alt="">
+          </div>          
+
+        <button class="botao cart__produto_info_botao">Checkout</button>
       </div>    
     </div>    
 
@@ -102,7 +114,7 @@
           <span class="conteudo__info_botao_qtd">0</span>
           <img  class="conteudo__info_botao_qtd_diminui" src="images/icon-minus.svg" alt="">
         </div>
-        <button class="conteudo__info_botoes_add">
+        <button class="botao conteudo__info_botoes_add">
           <img src="images/icon-cart.svg" class="brightness" alt="">Add to cart
         </button>         
       </div>      

@@ -92,13 +92,8 @@
 }
 
 .conteudo__info_botoes_add {
-    align-items: center;
-    border: none;
-    background-color: hsl(26, 100%, 55%);    
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    font-weight: 700;   
+    align-items: center;    
+    display: flex;    
     justify-content: center; 
     width: 70%;
     height: 100%;    
