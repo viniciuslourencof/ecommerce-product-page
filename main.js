@@ -107,3 +107,14 @@ for (let index = 0; index < listaFotosModal.length; index++) {
     }
 
 }
+
+const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
+const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
+
+setaFotosModalDireita.onclick = function () {
+    trocaImagemPrincipalModal(fotoPrincipalModal.id); 
+}
+
+setaFotosModalEsquerda.onclick = function () {
+    trocaImagemPrincipalModal(fotoPrincipalModal.id); 
+}
