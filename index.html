@@ -35,7 +35,7 @@
       </nav>      
 
       <div class="menu__usuario">
-        <div>
+        <div class="menu__usuario_cart_container">
           <div class="menu__usuario_cart_notificacao">3</div>
           <img class="menu__usuario_cart" src="images/icon-cart.svg" alt="">
         </div>
@@ -50,21 +50,21 @@
       <h3>Cart</h3>
       <div class="cart__produto">        
           
-          <div class="card__produto_top">
-            <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
-            <div class="cart__produto_info">
-              <p class="cart__produto_info_descricao">Fall Limited Edition Sneakers</p>
-              <div class="cart__produto_info_valores">
-                <span class="cart__produto_info_valor">$125.00</span> 
-                <span>x</span>
-                <span class="cart__produto_info_qtd">3</span>
-                <span class="cart__produto_info_valortotal">$375.00</span>
-              </div>              
-            </div>
-            <img class="card__produto_delete" src="images/icon-delete.svg" alt="">
-          </div>          
-
+        <div class="card__produto_top">
+          <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
+          <div class="cart__produto_info">
+            <p class="cart__produto_info_descricao">Fall Limited Edition Sneakers</p>
+            <div class="cart__produto_info_valores">
+              <span class="cart__produto_info_valor">$125.00</span> 
+              <span>x</span>
+              <span class="cart__produto_info_qtd">3</span>
+              <span class="cart__produto_info_valortotal">$375.00</span>
+            </div>              
+          </div>
+          <img class="card__produto_delete" src="images/icon-delete.svg" alt="">
+        </div>          
         <button class="botao cart__produto_info_botao">Checkout</button>
+
       </div>    
     </div>    
 
@@ -123,7 +123,13 @@
     <div class="modal">
       <div class="modal-content">
         
-          <img class="conteudo__fotos_principal" src="images/image-product-1.jpg" alt="">
+          <img src="images/icon-close.svg" alt="">
+
+          <div class="conteudo__fotos_container">
+            <img src="images/icon-previous.svg" alt="">
+            <img class="conteudo__fotos_principal" src="images/image-product-1.jpg" alt="">
+            <img src="images/icon-next.svg" alt="">
+          </div>
     
           <div class="conteudo__fotos_secundarias">   
             <div class="conteudo__fotos_secundaria ativo" id="0">

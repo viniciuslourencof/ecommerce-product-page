@@ -63,14 +63,3 @@
     cursor: pointer;
  }
 
- .menu__usuario_cart_notificacao {
-    border-radius: 100%;
-    background-color: hsl(26, 100%, 55%);        
-    color: white;
-    font-size: 0.5rem;
-    font-weight: 700;
-    height: 0.8rem;
-    text-align: center;        
-    width: 1rem;
-    margin: auto;
- }

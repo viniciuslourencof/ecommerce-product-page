@@ -121,3 +121,7 @@
 .conteudo__info_botoes_qtd img {
     cursor: pointer;
 }
+
+.conteudo__fotos_container {
+    display: flex;
+}
