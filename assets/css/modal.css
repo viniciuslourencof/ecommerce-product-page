@@ -1,0 +1,58 @@
+.modal-content {
+    background-color: transparent;
+    border-radius: 0.5rem;
+    left: 50%;    
+    padding: 1rem 1.5rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;    
+    width: auto;       
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal__fotos_principal {
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    width: 30rem;
+}
+
+.modal__fotos_secundarias {    
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__fotos_secundaria {
+    cursor: pointer;      
+    height: 7rem;
+    width: 7rem;
+}
+
+.modal__fotos_container {
+    display: flex;
+    align-items: center;    
+}
+
+.modal__fotos_seta {
+    align-items: center;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;    
+    justify-content: center;
+    height: 3rem;    
+    width: 3rem;
+}
+
+.modal__fotos_secundaria img {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
