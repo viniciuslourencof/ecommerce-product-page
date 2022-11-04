@@ -13,11 +13,11 @@
 
 .ativo {
     border: 2px solid hsl(26, 100%, 55%);    
-    border-radius: 10px;
+    border-radius: 13px;
 }
 
 .ativo img {
-    opacity: 0.50;        
+    opacity: 0.50;            
 }
 
 .modal {

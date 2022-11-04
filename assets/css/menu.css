@@ -42,13 +42,13 @@
     font-size: 0.5rem;
     font-weight: 700;
     height: 0.6rem;
-    text-align: center;        
+    left: 25px;
     margin: auto;
     position: relative;
-    width: 1rem;    
+    text-align: center;        
     top: -7px;
-    left: 25px;
     z-index: 1;      
+    width: 1rem;    
 }
 
 .menu__usuario_cart_container {

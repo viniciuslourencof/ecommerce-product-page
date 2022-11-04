@@ -71,8 +71,39 @@ botaoUsuarioCart.onclick = function () {
     mostraCart();
 } 
 
-function windowOnClick(event) {
+window.addEventListener("click", function(event) {
     if (event.target === document.querySelector(".modal")) {        
         expandeFoto();
     }
+});
+
+const listaFotosModal = document.querySelectorAll('.modal__fotos_secundaria');
+const fotoPrincipalModal = document.querySelector('.modal__fotos_principal');
+
+function trocaImagemPrincipalModal (id) {    
+
+    for (let index = 0; index < listaFotosModal.length; index++) {
+
+        const fotoModal = listaFotosModal[index];    
+
+        if (fotoModal.classList.contains('ativo')) {
+            fotoModal.classList.remove('ativo');    
+        }      
+
+        if (index == id) {            
+            fotoModal.classList.add('ativo');
+        }                     
+    }
+
+    fotoPrincipalModal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
+}
+
+for (let index = 0; index < listaFotosModal.length; index++) {
+
+    const fotoModal = listaFotosModal[index];    
+
+    fotoModal.onclick = function () {
+        trocaImagemPrincipalModal(fotoModal.id); 
+    }
+
 }

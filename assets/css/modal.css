@@ -2,8 +2,8 @@
     background-color: transparent;
     border-radius: 0.5rem;
     left: 50%;    
-    padding: 1rem 1.5rem;
     position: absolute;
+    padding: 1rem 1.5rem;
     transform: translate(-50%, -50%);
     top: 50%;    
     width: auto;       
@@ -19,36 +19,45 @@
 .modal__fotos_principal {
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;    
     width: 30rem;
 }
 
-.modal__fotos_secundarias {    
-    padding-left: 3rem;
-    padding-right: 3rem;
+.modal__fotos_secundarias {        
+    padding: 0 6rem;
     display: flex;
     justify-content: space-between;
 }
 
 .modal__fotos_secundaria {
     cursor: pointer;      
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .modal__fotos_container {
-    display: flex;
     align-items: center;    
+    display: flex;
 }
 
 .modal__fotos_seta {
     align-items: center;
     background-color: white;
     border-radius: 100%;
+    cursor: pointer;
     display: flex;    
-    justify-content: center;
     height: 3rem;    
-    width: 3rem;
+    justify-content: center;
+    position: relative;    
+    width: 3rem;    
+}
+
+.modal__fotos_seta--direita {
+    left: -25px;
+}
+
+.modal__fotos_seta--esquerda {
+    right: -25px;
 }
 
 .modal__fotos_secundaria img {
