@@ -2,15 +2,13 @@ Solução de página de produto de comércio eletrônico
 
 ## Índice
 
-- [Visão geral](#visão geral)
+- [Visão geral](#visão-geral)
   - [O desafio](#the-challenge)
   - [Captura de tela](#captura-de-tela)
   - [Links](#links)
 - [Meu processo](#meu-processo)
-  - [Construído com](#construído com)      
+  - [Construído com](#construído-com)      
 - [Autor](#autor)
-
-**Observação: exclua esta nota e atualize o índice com base nas seções que você mantém.**
 
 ## Visão geral
 
@@ -31,8 +29,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL da solução: [Adicione o URL da solução aqui](https://your-solution-url.com)
-- URL do site ao vivo: [Adicione o URL do site ao vivo aqui](https://your-live-site-url.com)
+- URL do site ao vivo: [Adicione o URL do site ao vivo aqui](http://ecommerce-product-page-main-pied.vercel.app/)
 
 ## Meu processo
 
@@ -41,15 +38,9 @@ Os usuários devem ser capazes de:
 - Marcação HTML5 semântica
 - Propriedades personalizadas de CSS
 - Flexbox
-- Grade CSS
-- Fluxo de trabalho mobile-first
-- [React](https://reactjs.org/) - biblioteca JS
-- [Next.js](https://nextjs.org/) - Estrutura de reação
-- [Componentes estilizados](https://styled-components.com/) - Para estilos
-
+- JS
 
 ## Autor
 
-- Site - [Adicione seu nome aqui](https://www.your-site.com)
-- Mentor de frontend - [@seunomedeusuário](https://www.frontendmentor.io/profile/seunomedeusuário)
+- Site - [Vinicius Lourenço](https://www.linkedin.com/in/viniciuslourencof/)
 - Twitter - [@seunome de usuário](https://www.twitter.com/seunome de usuário)
