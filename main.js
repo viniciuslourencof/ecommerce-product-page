@@ -2,9 +2,13 @@
 
 const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
 const fotoPrincipal = document.querySelector('.conteudo__fotos_principal');
-
 const listaFotosModal = document.querySelectorAll('.modal__fotos_secundaria');
 const fotoPrincipalModal = document.querySelector('.modal__fotos_principal');
+const botaoDiminuirQtd = document.querySelector('.conteudo__info_botao_qtd_diminui')
+const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aumenta')
+const botaoUsuarioCart = document.querySelector('.menu__usuario_cart')
+const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
+const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
 
 function trocaImagemPrincipal (id) {    
 
@@ -22,71 +26,8 @@ function trocaImagemPrincipal (id) {
     }
 
     fotoPrincipal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
-    fotoPrincipal.id = parseInt(id);
-    
+    fotoPrincipal.id = parseInt(id);    
 }
-
-for (let index = 0; index < listaFotos.length; index++) {
-
-    const foto = listaFotos[index];    
-
-    foto.onclick = function () {
-        trocaImagemPrincipal(foto.id); 
-    }
-
-}
-
-function expandeFoto () {
-    document.querySelector(".modal").classList.toggle("show-modal");   
-
-    // let id = parseInt(fotoPrincipal.id);
-        
-    console.log(document.querySelector('.conteudo__fotos_principal').id);
-
-    // fotoPrincipalModal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
-}
-
-fotoPrincipal.onclick = function () {
-    expandeFoto();
-}
-
-function alteraQuantidade(tipo) {
-
-    const botaoQtd = document.querySelector('.conteudo__info_botao_qtd')        
-    const qtd = botaoQtd.innerHTML;
-
-    if (tipo == 'diminui') {        
-      if ((parseInt(qtd) - 1) >= 0)
-        botaoQtd.innerHTML = parseInt(qtd) - 1;  
-    } else {
-      botaoQtd.innerHTML = parseInt(qtd) + 1;
-    }
-}
-
-const botaoDiminuirQtd = document.querySelector('.conteudo__info_botao_qtd_diminui')
-botaoDiminuirQtd.onclick = function () {
-    alteraQuantidade('diminui')
-}
-
-const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aumenta')
-botaoAumentaQtd.onclick = function () {
-    alteraQuantidade('aumenta')
-}
-
-function mostraCart () {
-    document.querySelector(".cart").classList.toggle("invisivel");  
-}
-
-const botaoUsuarioCart = document.querySelector('.menu__usuario_cart')
-botaoUsuarioCart.onclick = function () {
-    mostraCart();
-} 
-
-window.addEventListener("click", function(event) {
-    if (event.target === document.querySelector(".modal")) {        
-        expandeFoto();
-    }
-});
 
 function trocaImagemPrincipalModal (id) {    
 
@@ -104,6 +45,41 @@ function trocaImagemPrincipalModal (id) {
     }
 
     fotoPrincipalModal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
+    fotoPrincipalModal.id = parseInt(id);
+}
+
+function expandeFoto () {
+    document.querySelector(".modal").classList.toggle("show-modal");   
+
+    let id = parseInt(fotoPrincipal.id);                 
+
+    trocaImagemPrincipalModal(id);    
+}
+
+function alteraQuantidade(tipo) {
+
+    const botaoQtd = document.querySelector('.conteudo__info_botao_qtd')        
+    const qtd = botaoQtd.innerHTML;
+
+    if (tipo == 'diminui') {        
+      if ((parseInt(qtd) - 1) >= 0)
+        botaoQtd.innerHTML = parseInt(qtd) - 1;  
+    } else {
+      botaoQtd.innerHTML = parseInt(qtd) + 1;
+    }
+}
+
+function mostraCart () {
+    document.querySelector(".cart").classList.toggle("invisivel");  
+}
+
+for (let index = 0; index < listaFotos.length; index++) {
+
+    const foto = listaFotos[index];    
+
+    foto.onclick = function () {
+        trocaImagemPrincipal(foto.id); 
+    }
 }
 
 for (let index = 0; index < listaFotosModal.length; index++) {
@@ -115,15 +91,45 @@ for (let index = 0; index < listaFotosModal.length; index++) {
     }
 }
 
-const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
-const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
+fotoPrincipal.onclick = function () {
+    expandeFoto();
+}
+
+botaoDiminuirQtd.onclick = function () {
+    alteraQuantidade('diminui')
+}
+
+botaoAumentaQtd.onclick = function () {
+    alteraQuantidade('aumenta')
+}
+
+botaoUsuarioCart.onclick = function () {
+    mostraCart();
+} 
+
+window.addEventListener("click", function(event) {
+    if (event.target === document.querySelector(".modal")) {        
+        expandeFoto();
+    }
+});
+
 
 setaFotosModalDireita.onclick = function () {    
-    // trocaImagemPrincipalModal(fotoPrincipalModal.id + parseInt(1)); 
-    // fotoPrincipalModal.id = fotoPrincipalModal.id + parseInt(1);    
+    let id = parseInt(fotoPrincipalModal.id) + parseInt(1);      
+
+    if (id > 3 ) {
+        id = 0
+    }    
+
+    trocaImagemPrincipalModal(id);    
 }
 
 setaFotosModalEsquerda.onclick = function () {    
-    // trocaImagemPrincipalModal(fotoPrincipalModal.id - parseInt(1)); 
-    // fotoPrincipalModal.id = fotoPrincipalModal.id - parseInt(1);    
+    let id = parseInt(fotoPrincipalModal.id) - parseInt(1);                                          
+
+    if (id < 0 ) {
+        id = 3
+    }        
+
+    trocaImagemPrincipalModal(id);    
 }
