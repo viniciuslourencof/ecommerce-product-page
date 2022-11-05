@@ -3,6 +3,9 @@
 const listaFotos = document.querySelectorAll('.conteudo__fotos_secundaria');
 const fotoPrincipal = document.querySelector('.conteudo__fotos_principal');
 
+const listaFotosModal = document.querySelectorAll('.modal__fotos_secundaria');
+const fotoPrincipalModal = document.querySelector('.modal__fotos_principal');
+
 function trocaImagemPrincipal (id) {    
 
     for (let index = 0; index < listaFotos.length; index++) {
@@ -19,6 +22,8 @@ function trocaImagemPrincipal (id) {
     }
 
     fotoPrincipal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
+    fotoPrincipal.id = parseInt(id);
+    
 }
 
 for (let index = 0; index < listaFotos.length; index++) {
@@ -32,7 +37,13 @@ for (let index = 0; index < listaFotos.length; index++) {
 }
 
 function expandeFoto () {
-    document.querySelector(".modal").classList.toggle("show-modal");    
+    document.querySelector(".modal").classList.toggle("show-modal");   
+
+    // let id = parseInt(fotoPrincipal.id);
+        
+    console.log(document.querySelector('.conteudo__fotos_principal').id);
+
+    // fotoPrincipalModal.src = `images/image-product-${parseInt(id) + 1}.jpg`;
 }
 
 fotoPrincipal.onclick = function () {
@@ -77,9 +88,6 @@ window.addEventListener("click", function(event) {
     }
 });
 
-const listaFotosModal = document.querySelectorAll('.modal__fotos_secundaria');
-const fotoPrincipalModal = document.querySelector('.modal__fotos_principal');
-
 function trocaImagemPrincipalModal (id) {    
 
     for (let index = 0; index < listaFotosModal.length; index++) {
@@ -105,16 +113,17 @@ for (let index = 0; index < listaFotosModal.length; index++) {
     fotoModal.onclick = function () {
         trocaImagemPrincipalModal(fotoModal.id); 
     }
-
 }
 
 const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
 const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
 
-setaFotosModalDireita.onclick = function () {
-    trocaImagemPrincipalModal(fotoPrincipalModal.id); 
+setaFotosModalDireita.onclick = function () {    
+    // trocaImagemPrincipalModal(fotoPrincipalModal.id + parseInt(1)); 
+    // fotoPrincipalModal.id = fotoPrincipalModal.id + parseInt(1);    
 }
 
-setaFotosModalEsquerda.onclick = function () {
-    trocaImagemPrincipalModal(fotoPrincipalModal.id); 
+setaFotosModalEsquerda.onclick = function () {    
+    // trocaImagemPrincipalModal(fotoPrincipalModal.id - parseInt(1)); 
+    // fotoPrincipalModal.id = fotoPrincipalModal.id - parseInt(1);    
 }
