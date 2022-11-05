@@ -38,6 +38,7 @@
 .modal__fotos_container {
     align-items: center;    
     display: flex;
+    clear: right;
 }
 
 .modal__fotos_seta {
@@ -63,6 +64,26 @@
 .modal__fotos_secundaria img {
     border-radius: 10px;
     height: 100%;
-    width: 100%;
+    width: 100%;    
 }
 
+.modal__fechar {
+    cursor: pointer;
+    float: right;
+    left: -45px;
+    height: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.modal__botao_ativo {
+    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
+}
+
+.modal__fotos_seta_img--esquerda:hover {
+    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
+}
+
+.modal__fotos_seta_img--direita:hover {
+    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
+}

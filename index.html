@@ -24,6 +24,7 @@
 <body>
 
   <header class="cabecalho">    
+
       <nav class="menu">
         <ul class="menu__lista">
           <li class="menu__lista_logo"><img src="images/logo.svg" alt=""></li>
@@ -49,8 +50,7 @@
 
     <div class="cart invisivel">
       <h3>Cart</h3>
-      <div class="cart__produto">        
-          
+      <div class="cart__produto">                
         <div class="card__produto_top">
           <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
           <div class="cart__produto_info">
@@ -65,13 +65,11 @@
           <img class="card__produto_delete" src="images/icon-delete.svg" alt="">
         </div>          
         <button class="botao cart__produto_info_botao">Checkout</button>
-
       </div>    
     </div>    
 
     <div class="conteudo__fotos">
       <img class="conteudo__fotos_principal" id="0" src="images/image-product-1.jpg" alt="">
-
       <div class="conteudo__fotos_secundarias">   
         <div class="conteudo__fotos_secundaria ativo" id="0">
           <img src="images/image-product-1-thumbnail.jpg" alt="">
@@ -84,31 +82,25 @@
         </div>     
         <div class="conteudo__fotos_secundaria " id="3">
           <img src="images/image-product-4-thumbnail.jpg" alt="">
-        </div>     
-        
-      </div>
-     
+        </div>             
+      </div>     
     </div>
 
     <section class="conteudo__info">
+
       <h2 class="conteudo__info_loja">Sneaker Company</h2>
-
       <h1 class="conteudo__info_titulo">Fall Limited Edition Sneakers</h1>
-
       <p class="conteudo__info_descricao">
         These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>      
-
       <div class="conteudo__info_preco">
         <span class="conteudo__info_preco_atual">$125.00</span>
         <div class="conteudo_info_preco_desconto">
-          <span >50%</span> 
+          <span>50%</span> 
         </div>
-      </div>
-      
-      <span class="conteudo__info_preco_antigo">$250.00</span>
-      
+      </div>      
+      <span class="conteudo__info_preco_antigo">$250.00</span>      
       <div class="conteudo__info_botoes">        
         <div class="conteudo__info_botoes_qtd">
           <img class="conteudo__info_botao_qtd_aumenta" src="images/icon-plus.svg" alt="">
@@ -119,27 +111,22 @@
           <img src="images/icon-cart.svg" class="brightness" alt="">Add to cart
         </button>         
       </div>      
+
     </section>
 
     <div class="modal">
       <div class="modal-content">
-        
-          <img src="images/icon-close.svg" class="modal__fechar" alt="">
-
-          <div class="modal__fotos_container">
-
+                  
+          <img class="modal__fechar" src="images/icon-close.svg" class="modal__fechar" alt="">          
+          <div class="modal__fotos_container">            
             <div class="modal__fotos_seta modal__fotos_seta--esquerda">
-              <img src="images/icon-previous.svg" alt="">
+              <img class="modal__fotos_seta_img--esquerda" src="images/icon-previous.svg" alt="">
             </div>
-
             <img class="modal__fotos_principal" id="0" src="images/image-product-1.jpg" alt="">
-
             <div class="modal__fotos_seta modal__fotos_seta--direita">
-              <img src="images/icon-next.svg" alt="">
+              <img class="modal__fotos_seta_img--direita" src="images/icon-next.svg" alt="">
             </div>
-
-          </div>
-    
+          </div>    
           <div class="modal__fotos_secundarias">   
             <div class="modal__fotos_secundaria ativo" id="0">
               <img src="images/image-product-1-thumbnail.jpg" alt="">
@@ -162,6 +149,7 @@
 
 
   <script src="main.js"></script>
+  <script src="cart.js"></script>
   
 </body>
 </html>

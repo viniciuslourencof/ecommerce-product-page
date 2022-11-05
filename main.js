@@ -9,6 +9,7 @@ const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aument
 const botaoUsuarioCart = document.querySelector('.menu__usuario_cart')
 const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
 const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
+const botaoFecharModal = document.querySelector('.modal__fechar')
 
 function trocaImagemPrincipal (id) {    
 
@@ -107,12 +108,51 @@ botaoUsuarioCart.onclick = function () {
     mostraCart();
 } 
 
+botaoFecharModal.onclick = function () {
+    expandeFoto();    
+}
+
+botaoFecharModal.addEventListener('mouseover', (event) => {
+    if (event.target === botaoFecharModal) {        
+        botaoFecharModal.classList.toggle('modal__botao_ativo');         
+    }
+});
+
+botaoFecharModal.addEventListener('mouseout', (event) => {
+    if (event.target === botaoFecharModal) {        
+        botaoFecharModal.classList.toggle('modal__botao_ativo');         
+    }
+});
+
+setaFotosModalEsquerda.addEventListener('mouseover', (event) => {
+    if (event.target === setaFotosModalEsquerda) {        
+        document.querySelector('.modal__fotos_seta_img--esquerda').classList.toggle('modal__botao_ativo');                 
+    }
+});
+
+setaFotosModalEsquerda.addEventListener('mouseout', (event) => {
+    if (event.target === setaFotosModalEsquerda) {        
+        document.querySelector('.modal__fotos_seta_img--esquerda').classList.toggle('modal__botao_ativo');                 
+    }
+});
+
+setaFotosModalDireita.addEventListener('mouseover', (event) => {
+    if (event.target === setaFotosModalDireita) {        
+        document.querySelector('.modal__fotos_seta_img--direita').classList.toggle('modal__botao_ativo');                 
+    }
+});
+
+setaFotosModalDireita.addEventListener('mouseout', (event) => {
+    if (event.target === setaFotosModalDireita) {        
+        document.querySelector('.modal__fotos_seta_img--direita').classList.toggle('modal__botao_ativo');                 
+    }
+});
+
 window.addEventListener("click", function(event) {
     if (event.target === document.querySelector(".modal")) {        
         expandeFoto();
     }
 });
-
 
 setaFotosModalDireita.onclick = function () {    
     let id = parseInt(fotoPrincipalModal.id) + parseInt(1);      
