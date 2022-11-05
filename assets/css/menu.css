@@ -7,6 +7,10 @@
     margin-right: 3rem;    
 }
 
+.menu__lista_item:hover {
+    border-bottom: 2px solid hsl(26, 100%, 55%);           
+}
+
 .menu__lista_item a {
     color: hsl(0, 0%, 0%);
 }

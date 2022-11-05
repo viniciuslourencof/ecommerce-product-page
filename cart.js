@@ -1,6 +1,7 @@
 const botaoAdicionarAoCarrinho = document.querySelector('.conteudo__info_botoes_add')
 const notificacaoCarrinho = document.querySelector('.menu__usuario_cart_notificacao') 
 const containerProdutos = document.querySelector('.cart__produtos')
+
 let itens = [];
 
 async function renderizarItens() {         
@@ -58,10 +59,13 @@ function addItem() {
     notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) + parseInt(qtdItem);
 
     renderizarItens();              
-
 }
 
 botaoAdicionarAoCarrinho.onclick = function () {
     addItem();
     console.log(itens)
+}
+
+function removerItem () {
+    
 }
