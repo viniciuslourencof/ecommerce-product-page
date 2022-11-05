@@ -43,4 +43,3 @@ Os usuários devem ser capazes de:
 ## Autor
 
 - Site - [Vinicius Lourenço](https://www.linkedin.com/in/viniciuslourencof/)
-- Twitter - [@seunome de usuário](https://www.twitter.com/seunome de usuário)
