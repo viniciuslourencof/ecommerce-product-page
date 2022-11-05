@@ -3,7 +3,7 @@ Solução de página de produto de comércio eletrônico
 ## Índice
 
 - [Visão geral](#visão-geral)
-  - [O desafio](#the-challenge)
+  - [O desafio](#o-desafio)
   - [Captura de tela](#captura-de-tela)
   - [Links](#links)
 - [Meu processo](#meu-processo)
@@ -25,11 +25,11 @@ Os usuários devem ser capazes de:
 
 ### Captura de tela
 
-![](./screenshot.jpg)
+![](./images/desktop.PNG)
 
 ### Links
 
-- URL do site ao vivo: [Adicione o URL do site ao vivo aqui](http://ecommerce-product-page-main-pied.vercel.app/)
+- URL do site ao vivo: [http://ecommerce-product-page-main-pied.vercel.app/](http://ecommerce-product-page-main-pied.vercel.app/)
 
 ## Meu processo
 
