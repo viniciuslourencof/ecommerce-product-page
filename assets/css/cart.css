@@ -11,7 +11,7 @@
 }
 
 .cart h3 {   
-    border-bottom: 1px solid hsl(226, 29%, 91%);        
+    border-bottom: 2px solid hsl(223, 64%, 98%);
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
@@ -24,7 +24,7 @@
     justify-content: space-around;    
 }
 
-.card__produto_top {
+.cart__produto_top {
     align-items: center;
     display: flex;      
     margin-bottom: 1rem;  
@@ -44,6 +44,7 @@
 .cart__produto_info_botao {
     width: 100%;
     height: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .cart__produto_info_descricao {
@@ -59,7 +60,13 @@
     font-weight: 700;
  }
 
- .card__produto_delete {
+ .cart__produto_delete {
     cursor: pointer;
  }
 
+.cart__produto_vazio {
+    font-weight: 700;
+    color: hsl(220, 14%, 75%);
+    text-align: center;
+    padding: 3rem;
+}

@@ -53,6 +53,7 @@
 
 .menu__usuario_cart_container {
     display: flex;        
+    cursor: pointer;    
 }
 
 .menu__usuario_cart {
