@@ -4,6 +4,18 @@ const containerProdutos = document.querySelector('.cart__produtos')
 
 let itens = [];
 
+function removerItem (id) {
+
+    var index = itens.map(function(o) { return o.id; }).indexOf(id);          
+
+    // const index = itens.indexOf(id);
+    if (index > -1) { // only splice array when item is found
+        itens.splice(index, 1); // 2nd parameter means remove one item only
+    }        
+    
+    console.log(itens);
+}
+
 async function renderizarItens() {         
 
     let html = '';    
@@ -32,8 +44,18 @@ async function renderizarItens() {
     };
    
     html += '<button class="botao cart__produto_info_botao">Checkout</button>'
-    containerProdutos.innerHTML = html;                           
+    containerProdutos.innerHTML = html;                              
 
+    const listaItens  = document.querySelectorAll('.cart__produto_delete');
+    for (let index = 0; index < listaItens.length; index++) {
+
+        const item = listaItens[index];    
+
+        item.onclick = function () {
+            removerItem(item.id); 
+            renderizarItens();              
+        }
+    }
 }                        
 
 let idItem = 0;
@@ -70,20 +92,5 @@ botaoAdicionarAoCarrinho.onclick = function () {
     addItem();    
 }
 
-function removerItem (id) {
 
-    var index = itens.findIndex(p => p.id == id);
 
-    // const index = itens.indexOf(id);
-    if (index > -1) { // only splice array when item is found
-      array.splice(index, 1); // 2nd parameter means remove one item only
-    }        
-}
-
-const botaoRemoverDoCarrinho = document.querySelector('.cart__produto_delete')
-
-botaoRemoverDoCarrinho.onclick = function () {
-    removerItem(botaoRemoverDoCarrinho.id);
-
-    renderizarItens();
-}
