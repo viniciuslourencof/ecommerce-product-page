@@ -4,23 +4,26 @@ const containerProdutos = document.querySelector('.cart__produtos')
 
 let itens = [];
 
-function removerItem (id) {
+function removerItem (id) {    
 
-    var index = itens.map(function(o) { return o.id; }).indexOf(id);          
+    for (let index = 0; index < itens.length; index++) {
+        const element = itens[index];
 
-    // const index = itens.indexOf(id);
-    if (index > -1) { // only splice array when item is found
-        itens.splice(index, 1); // 2nd parameter means remove one item only
-    }        
-    
-    console.log(itens);
+        if (element[0] = id) {            
+            if (index > -1) { // only splice array when item is found
+                itens.splice(index, 1); // 2nd parameter means remove one item only
+            }                                        
+        }                 
+    }         
 }
 
 async function renderizarItens() {         
 
     let html = '';    
 
-    if (itens) {
+    if (itens.length === 0) {
+        `<div class="cart__produto_vazio">Your cart is empty</div>`        
+    } else {      
         itens.forEach(item => {            
     
             let htmlSegment = 
@@ -40,8 +43,8 @@ async function renderizarItens() {
                 
             html += htmlSegment;                               
             
-        });
-    };
+        });        
+    }
    
     html += '<button class="botao cart__produto_info_botao">Checkout</button>'
     containerProdutos.innerHTML = html;                              
@@ -56,7 +59,9 @@ async function renderizarItens() {
             renderizarItens();              
         }
     }
-}                        
+}                
+
+renderizarItens();              
 
 let idItem = 0;
 
