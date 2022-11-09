@@ -11,7 +11,7 @@ function removerItem (id) {
 
         if (item.id == id) {
             itens.splice(index,1);        
-            notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) - parseInt(item.qtdItem);
+            notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) - parseInt(item.qtd_item);
         }
         
     }            
@@ -23,7 +23,8 @@ async function renderizarItens() {
     let html = '';    
 
     if (itens.length === 0) {
-        `<div class="cart__produto_vazio">Your cart is empty</div>`        
+        let htmlSegment = `<div class="cart__produto_vazio">Your cart is empty</div>`        
+        html += htmlSegment;       
     } else {      
         itens.forEach(item => {            
     
@@ -42,12 +43,12 @@ async function renderizarItens() {
                     <img class="cart__produto_delete" id="${item.id}" src="images/icon-delete.svg" alt="">
                 </div>`;                
                 
-            html += htmlSegment;                               
-            
+            html += htmlSegment;                                           
         });        
-    }
-   
-    html += '<button class="botao cart__produto_info_botao">Checkout</button>'
+
+        html += '<button class="botao cart__produto_info_botao">Checkout</button>'
+    }   
+    
     containerProdutos.innerHTML = html;                              
 
     const listaItens  = document.querySelectorAll('.cart__produto_delete');
@@ -59,6 +60,12 @@ async function renderizarItens() {
             removerItem(item.id); 
             renderizarItens();              
         }
+    }
+
+    if (notificacaoCarrinho.innerHTML == '0') {
+        notificacaoCarrinho.classList.add('invisivel');
+    } else {
+        notificacaoCarrinho.classList.remove('invisivel');
     }
 }                
 

@@ -7,8 +7,13 @@
     padding: 1.5rem 0;
 }
 
-.brightness {
+.branco {
     filter: brightness(100);
+}
+
+
+.laranja {
+    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
 }
 
 .ativo {
@@ -18,6 +23,15 @@
 }
 
 .ativo img {
+    opacity: 0.50;                
+}
+
+.ativo__hover {        
+    border-radius: 13px;
+    background-color: white;    
+}
+
+.ativo__hover img {
     opacity: 0.50;                
 }
 
@@ -33,7 +47,6 @@
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-
 
 .invisivel {
     display: none;

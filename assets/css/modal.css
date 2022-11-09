@@ -76,14 +76,4 @@
     position: relative;
 }
 
-.modal__botao_ativo {
-    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
-}
 
-.modal__fotos_seta_img--esquerda:hover {
-    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
-}
-
-.modal__fotos_seta_img--direita:hover {
-    filter: invert(53%) sepia(91%) saturate(1823%) hue-rotate(348deg) brightness(103%) contrast(101%);    
-}
