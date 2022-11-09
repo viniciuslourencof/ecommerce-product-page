@@ -6,14 +6,12 @@ let itens = [];
 
 function removerItem (id) {    
 
-
-    // console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ itens", itens)
-
     for (let index = 0; index < itens.length; index++) {
         const item = itens[index];
 
         if (item.id == id) {
             itens.splice(index,1);        
+            notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) - parseInt(item.qtdItem);
         }
         
     }            
