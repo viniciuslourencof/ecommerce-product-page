@@ -6,15 +6,25 @@ let itens = [];
 
 function removerItem (id) {    
 
-    for (let index = 0; index < itens.length; index++) {
-        const element = itens[index];
+    // console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ itens", itens)
 
-        if (element[0] = id) {            
-            if (index > -1) { // only splice array when item is found
-                itens.splice(index, 1); // 2nd parameter means remove one item only
-            }                                        
-        }                 
-    }         
+    itens.forEach(item => {         
+
+        if (item.id = id) {
+
+            console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ id", id)            
+            console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ item.id", item.id)            
+            console.log("🚀 ~ file: cart.js ~ line 19 ~ removerItem ~ itens.indexOf(item)", itens.indexOf(item))
+            
+            notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) - parseInt(item.qtdItem);    
+            
+            // delete itens[itens.indexOf(item)];
+            
+            
+        }        
+
+    });              
+        
 }
 
 async function renderizarItens() {         
@@ -30,15 +40,15 @@ async function renderizarItens() {
                 `<div class="cart__produto_top">
                     <img class="cart__produto_foto" src="images/image-product-1.jpg" alt="">  
                     <div class="cart__produto_info">
-                    <p class="cart__produto_info_descricao">${item[1].nome}</p>
+                    <p class="cart__produto_info_descricao">${item.nome}</p>
                     <div class="cart__produto_info_valores">
-                        <span class="cart__produto_info_valor">$${item[2].valor_item.toFixed(2)}</span> 
+                        <span class="cart__produto_info_valor">$${item.valor_item.toFixed(2)}</span> 
                         <span>x</span>
-                        <span class="cart__produto_info_qtd">${item[3].qtd_item}</span>
-                        <span class="cart__produto_info_valortotal">$${item[4].valor_totalitem.toFixed(2)}</span>
+                        <span class="cart__produto_info_qtd">${item.qtd_item}</span>
+                        <span class="cart__produto_info_valortotal">$${item.valor_totalitem.toFixed(2)}</span>
                     </div>              
                     </div>
-                    <img class="cart__produto_delete" id="${item[0].id}" src="images/icon-delete.svg" alt="">
+                    <img class="cart__produto_delete" id="${item.id}" src="images/icon-delete.svg" alt="">
                 </div>`;                
                 
             html += htmlSegment;                               
@@ -72,25 +82,33 @@ function addItem() {
     const qtdItem = parseFloat(document.querySelector('.conteudo__info_botao_qtd').innerHTML);
     const valorTotalItem = valorItem * qtdItem; 
     
-    idItem += 1;
+    if (qtdItem > 0) {
+        idItem += 1;
 
-    itens.push(
-        [
-            {'id': idItem},
-            {'nome': nomeItem},
-            {'valor_item': valorItem},
-            {'qtd_item': qtdItem}, 
-            {'valor_totalitem': valorTotalItem}
-        ]
-    );    
-
-    if (notificacaoCarrinho.classList.contains('invisivel')) {
-        notificacaoCarrinho.classList.toggle('invisivel')
-    }
+        var item = {            
+            'id': idItem,          
+            'nome': nomeItem,
+            'valor_item': valorItem,
+            'qtd_item': qtdItem, 
+            'valor_totalitem': valorTotalItem
+        };
     
-    notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) + parseInt(qtdItem);
+        itens.push(item);
 
-    renderizarItens();              
+        console.log("🚀 ~ file: cart.js ~ line 95 ~ addItem ~ itens", itens)
+            
+        if (notificacaoCarrinho.classList.contains('invisivel')) {
+            notificacaoCarrinho.classList.toggle('invisivel')
+        }
+        
+        notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) + parseInt(qtdItem);
+    
+        document.querySelector('.conteudo__info_botao_qtd').innerHTML = '0';
+    
+        renderizarItens();         
+        
+    }
+
 }
 
 botaoAdicionarAoCarrinho.onclick = function () {
