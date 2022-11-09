@@ -6,24 +6,17 @@ let itens = [];
 
 function removerItem (id) {    
 
+
     // console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ itens", itens)
 
-    itens.forEach(item => {         
+    for (let index = 0; index < itens.length; index++) {
+        const item = itens[index];
 
-        if (item.id = id) {
-
-            console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ id", id)            
-            console.log("🚀 ~ file: cart.js ~ line 14 ~ removerItem ~ item.id", item.id)            
-            console.log("🚀 ~ file: cart.js ~ line 19 ~ removerItem ~ itens.indexOf(item)", itens.indexOf(item))
-            
-            notificacaoCarrinho.innerHTML = parseInt(notificacaoCarrinho.innerHTML) - parseInt(item.qtdItem);    
-            
-            // delete itens[itens.indexOf(item)];
-            
-            
-        }        
-
-    });              
+        if (item.id == id) {
+            itens.splice(index,1);        
+        }
+        
+    }            
         
 }
 
