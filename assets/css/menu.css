@@ -8,7 +8,7 @@
 }
 
 .menu__lista_item:hover {
-    border-bottom: 2px solid hsl(26, 100%, 55%);           
+    border-bottom: 3px solid hsl(26, 100%, 55%);           
 }
 
 .menu__lista_item a {
@@ -62,4 +62,11 @@
 
 .menu__usuario_cart {
     filter: brightness(0);    
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu__lista_item {
+        display: none;
+    }
 }

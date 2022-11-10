@@ -60,3 +60,13 @@
     font-weight: 700;   
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        width: 100vw;
+    }
+
+    .cabecalho {
+        width: 100%;
+    }
+}
+
