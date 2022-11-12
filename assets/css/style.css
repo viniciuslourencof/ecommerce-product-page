@@ -1,3 +1,7 @@
+body {
+    padding: 0 2rem;     
+}
+
 .cabecalho {
     align-items: center;
     border-bottom: 2px solid hsl(223, 64%, 98%);
@@ -60,27 +64,19 @@
     font-weight: 700;   
 }
 
-@media screen and (min-width: 0px) {
+@media screen and (max-width: 400px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
     .cabecalho {
-        width: calc(100% - 2rem);
-    }
-
-    .conteudo {
-        width: calc(100% - 2rem);        
-        flex-direction: column;
-    }    
-
-    .conteudo__fotos {
-        width: auto;
-    }
-
-    .conteudo__fotos_principal {
         width: 100%;
+        margin-bottom: 0;
+        padding: 1rem;
     }
     
 
-    .conteudo__fotos_secundarias {
-        display: none;
-    }
 }
 

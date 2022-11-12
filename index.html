@@ -58,7 +58,17 @@
     </div>    
 
     <div class="conteudo__fotos">
-      <img class="conteudo__fotos_principal" id="0" src="images/image-product-1.jpg" alt="">
+
+      <div class="modal__fotos_container">
+        <div class="modal__fotos_seta modal__fotos_seta--esquerda">
+          <img class="modal__fotos_seta_img--esquerda" src="images/icon-previous.svg" alt="">
+        </div>        
+        <img class="conteudo__fotos_principal" id="0" src="images/image-product-1.jpg" alt="">
+        <div class="modal__fotos_seta modal__fotos_seta--direita">
+          <img class="modal__fotos_seta_img--direita" src="images/icon-next.svg" alt="">
+        </div>        
+      </div>
+
       <div class="conteudo__fotos_secundarias">   
         <div class="conteudo__fotos_secundaria ativo" id="0">
           <img src="images/image-product-1-thumbnail.jpg" alt="">
@@ -83,13 +93,17 @@
         These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they'll withstand everything the weather can offer.
       </p>      
-      <div class="conteudo__info_preco">
-        <span class="conteudo__info_preco_atual">$125.00</span>
-        <div class="conteudo_info_preco_desconto">
-          <span>50%</span> 
-        </div>
-      </div>      
-      <span class="conteudo__info_preco_antigo">$250.00</span>      
+
+      <div class="conteudo__info_precos">
+        <div class="conteudo__info_preco">
+          <span class="conteudo__info_preco_atual">$125.00</span>
+          <div class="conteudo_info_preco_desconto">
+            <span>50%</span> 
+          </div>
+        </div>      
+        <span class="conteudo__info_preco_antigo">$250.00</span>      
+      </div>
+
       <div class="conteudo__info_botoes">        
         <div class="conteudo__info_botoes_qtd">
           <img class="conteudo__info_botao_qtd_aumenta" src="images/icon-plus.svg" alt="">
