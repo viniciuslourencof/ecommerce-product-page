@@ -79,16 +79,6 @@
 
 @media screen and (max-width: 900px) {
 
-    .modal__fotos_seta {
-        position: absolute;
-    }
     
-    .modal__fotos_seta--direita {
-        left: 20px;
-    }
-
-    .modal__fotos_seta--esquerda {
-        right: 20px;
-    }
 }        
 

@@ -9,7 +9,11 @@ const botaoAumentaQtd = document.querySelector('.conteudo__info_botao_qtd_aument
 const botaoUsuarioCart = document.querySelector('.menu__usuario_cart_container')
 const setaFotosModalDireita = document.querySelector('.modal__fotos_seta--direita');
 const setaFotosModalEsquerda = document.querySelector('.modal__fotos_seta--esquerda');
+const imgSetaFotosModalDireita = document.querySelector('.modal__fotos_seta_img--direita');
+const imgSetaFotosModalEsquerda = document.querySelector('.modal__fotos_seta_img--esquerda');
 const botaoFecharModal = document.querySelector('.modal__fechar')
+const setaFotosDireita = document.querySelector('.conteudo__fotos_seta--direita');
+const setaFotosEsquerda = document.querySelector('.conteudo__fotos_seta--esquerda');
 
 function trocaImagemPrincipal (id) {    
 
@@ -144,25 +148,25 @@ botaoFecharModal.addEventListener('mouseout', (event) => {
 
 setaFotosModalEsquerda.addEventListener('mouseover', (event) => {
     if (event.target === setaFotosModalEsquerda) {        
-        document.querySelector('.modal__fotos_seta_img--esquerda').classList.toggle('laranja');                 
+        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
     }
 });
 
 setaFotosModalEsquerda.addEventListener('mouseout', (event) => {
     if (event.target === setaFotosModalEsquerda) {        
-        document.querySelector('.modal__fotos_seta_img--esquerda').classList.toggle('laranja');                 
+        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
     }
 });
 
 setaFotosModalDireita.addEventListener('mouseover', (event) => {
     if (event.target === setaFotosModalDireita) {        
-        document.querySelector('.modal__fotos_seta_img--direita').classList.toggle('laranja');                 
+        imgSetaFotosModalDireita.classList.toggle('laranja');                 
     }
 });
 
 setaFotosModalDireita.addEventListener('mouseout', (event) => {
     if (event.target === setaFotosModalDireita) {        
-        document.querySelector('.modal__fotos_seta_img--direita').classList.toggle('laranja');                 
+        imgSetaFotosModalDireita.classList.toggle('laranja');                 
     }
 });
 
@@ -191,3 +195,48 @@ setaFotosModalEsquerda.onclick = function () {
 
     trocaImagemPrincipalModal(id);    
 }
+
+
+setaFotosDireita.onclick = function () {    
+    let id = parseInt(fotoPrincipal.id) + parseInt(1);      
+
+    if (id > 3 ) {
+        id = 0
+    }    
+
+    trocaImagemPrincipal(id);    
+}
+
+setaFotosEsquerda.onclick = function () {    
+    let id = parseInt(fotoPrincipal.id) - parseInt(1);                                          
+
+    if (id < 0 ) {
+        id = 3
+    }        
+
+    trocaImagemPrincipal(id);    
+}
+
+setaFotosModalEsquerda.addEventListener('mouseover', (event) => {
+    if (event.target === setaFotosModalEsquerda) {        
+        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
+    }
+});
+
+setaFotosModalEsquerda.addEventListener('mouseout', (event) => {
+    if (event.target === setaFotosModalEsquerda) {        
+        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
+    }
+});
+
+setaFotosModalDireita.addEventListener('mouseover', (event) => {
+    if (event.target === setaFotosModalDireita) {        
+        imgSetaFotosModalDireita.classList.toggle('laranja');                 
+    }
+});
+
+setaFotosModalDireita.addEventListener('mouseout', (event) => {
+    if (event.target === setaFotosModalDireita) {        
+        imgSetaFotosModalDireita.classList.toggle('laranja');                 
+    }
+});

@@ -121,6 +121,17 @@
     cursor: pointer;
 }
 
+.conteudo__fotos_container {
+    align-items: center;    
+    display: flex;
+    clear: right;
+    flex-direction: row;
+}
+
+.conteudo__fotos_seta {    
+    display: none;        
+}
+
 @media screen and (max-width: 900px) {
     .conteudo {
         width: 100%;
@@ -173,4 +184,26 @@
     .conteudo__info_botoes_add {
         width: 100%;        
     }
+
+    
+    .conteudo__fotos_seta {
+        align-items: center;
+        background-color: white;
+        border-radius: 100%;
+        cursor: pointer;
+        display: flex;    
+        height: 3rem;    
+        justify-content: center;
+        position: absolute;    
+        width: 3rem;    
+    }
+
+    .conteudo__fotos_seta--direita {
+        right: 10px;
+    }
+
+    .conteudo__fotos_seta--esquerda {
+        left: 10px;
+    }
+   
 }
