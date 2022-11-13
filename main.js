@@ -147,26 +147,26 @@ botaoFecharModal.addEventListener('mouseout', (event) => {
 });
 
 setaFotosModalEsquerda.addEventListener('mouseover', (event) => {
-    if (event.target === setaFotosModalEsquerda) {        
-        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
+    if ((event.target === setaFotosModalEsquerda) || (event.target === imgSetaFotosModalEsquerda)) {        
+        imgSetaFotosModalEsquerda.classList.add('laranja');                 
     }
 });
 
 setaFotosModalEsquerda.addEventListener('mouseout', (event) => {
-    if (event.target === setaFotosModalEsquerda) {        
-        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
+    if ((event.target === setaFotosModalEsquerda) || (event.target === imgSetaFotosModalEsquerda)) {        
+        imgSetaFotosModalEsquerda.classList.remove('laranja');                 
     }
 });
 
 setaFotosModalDireita.addEventListener('mouseover', (event) => {
-    if (event.target === setaFotosModalDireita) {        
-        imgSetaFotosModalDireita.classList.toggle('laranja');                 
+    if ((event.target === setaFotosModalDireita) || (event.target === imgSetaFotosModalDireita)) {        
+        imgSetaFotosModalDireita.classList.add('laranja');                 
     }
 });
 
 setaFotosModalDireita.addEventListener('mouseout', (event) => {
-    if (event.target === setaFotosModalDireita) {        
-        imgSetaFotosModalDireita.classList.toggle('laranja');                 
+    if ((event.target === setaFotosModalDireita) || (event.target === imgSetaFotosModalDireita)) {        
+        imgSetaFotosModalDireita.classList.remove('laranja');                 
     }
 });
 
@@ -216,27 +216,3 @@ setaFotosEsquerda.onclick = function () {
 
     trocaImagemPrincipal(id);    
 }
-
-setaFotosModalEsquerda.addEventListener('mouseover', (event) => {
-    if (event.target === setaFotosModalEsquerda) {        
-        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
-    }
-});
-
-setaFotosModalEsquerda.addEventListener('mouseout', (event) => {
-    if (event.target === setaFotosModalEsquerda) {        
-        imgSetaFotosModalEsquerda.classList.toggle('laranja');                 
-    }
-});
-
-setaFotosModalDireita.addEventListener('mouseover', (event) => {
-    if (event.target === setaFotosModalDireita) {        
-        imgSetaFotosModalDireita.classList.toggle('laranja');                 
-    }
-});
-
-setaFotosModalDireita.addEventListener('mouseout', (event) => {
-    if (event.target === setaFotosModalDireita) {        
-        imgSetaFotosModalDireita.classList.toggle('laranja');                 
-    }
-});

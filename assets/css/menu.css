@@ -1,6 +1,6 @@
 .menu__lista {
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
 .menu__lista_item {
@@ -64,9 +64,17 @@
     filter: brightness(0);    
 }
 
+.menu__lista_menu {
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     .menu__lista_item {
         display: none;
     }
+
+    .menu__lista_menu {                
+        /* display: inline-block; */
+    }    
+    
 }
