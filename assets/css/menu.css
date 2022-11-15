@@ -68,13 +68,38 @@
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 900px) {
     .menu__lista_item {
         display: none;
     }
 
     .menu__lista_menu {                
-        /* display: inline-block; */
-    }    
+        display: inline-block;
+        margin-right: 1rem;
+    }        
+    
+    .menu__mobile {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 2rem;
+        position: absolute;
+        z-index: 1;
+        width: 60%;
+    }
+
+    .menu__mobile_fechar {
+        cursor: pointer;        
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-bottom: 3rem;
+        position: relative;        
+    }
+
+    .menu__lista_mobile_item {
+        
+    }
     
 }

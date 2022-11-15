@@ -14,6 +14,7 @@ const imgSetaFotosModalEsquerda = document.querySelector('.modal__fotos_seta_img
 const botaoFecharModal = document.querySelector('.modal__fechar')
 const setaFotosDireita = document.querySelector('.conteudo__fotos_seta--direita');
 const setaFotosEsquerda = document.querySelector('.conteudo__fotos_seta--esquerda');
+const botaoMenuMobile = document.querySelector('.menu__lista_menu');
 
 function trocaImagemPrincipal (id) {    
 
@@ -216,3 +217,8 @@ setaFotosEsquerda.onclick = function () {
 
     trocaImagemPrincipal(id);    
 }
+
+
+// botaoMenuMobile.onclick = function () {    
+//     document.querySelector(".menu__mobile").classList.toggle("show-mobile_menu");   
+// }
