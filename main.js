@@ -219,6 +219,12 @@ setaFotosEsquerda.onclick = function () {
 }
 
 
-// botaoMenuMobile.onclick = function () {    
-//     document.querySelector(".menu__mobile").classList.toggle("show-mobile_menu");   
-// }
+botaoMenuMobile.onclick = function () {    
+    document.querySelector(".menu__mobile").classList.toggle("show-mobile_menu");   
+    document.querySelector(".menu__mobile").classList.toggle("invisivel");      
+}
+
+document.querySelector(".menu__mobile_fechar").onclick = function () {    
+    document.querySelector(".menu__mobile").classList.toggle("show-mobile_menu");   
+    document.querySelector(".menu__mobile").classList.toggle("invisivel");          
+}
